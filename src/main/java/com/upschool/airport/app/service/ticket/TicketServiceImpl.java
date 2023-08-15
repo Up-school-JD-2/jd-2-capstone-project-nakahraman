@@ -41,7 +41,7 @@ public class TicketServiceImpl implements TicketService{
 
     private Flight checkPrerequisites(Long customerId, Long flightId) {
 
-      //  checkDuplicateCustomerAndFlight(customerId, flightId);
+        checkDuplicateCustomerAndFlight(customerId, flightId);
 
         Flight flight = flightService.getFlightById(flightId);
         validateFlightCapacity(flight);
