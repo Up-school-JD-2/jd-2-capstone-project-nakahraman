@@ -45,8 +45,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
         logException(exception);
 
-        System.out.println("An exception occurred: " + exception.getMessage()
-                           + request.getHeader("client-type"));
+        System.out.println("An exception occurred: " + exception.getMessage());
         var response = BaseResponse.<Object>builder()
                 .status(HttpStatus.BAD_REQUEST.value())
                 .error(exception.getMessage())
