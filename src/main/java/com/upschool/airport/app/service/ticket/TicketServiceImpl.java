@@ -62,9 +62,9 @@ public class TicketServiceImpl implements TicketService{
     private void validateFlightCapacity(Flight flight) {
         if (flight.getCapacity() == 0) {
             throw new FlightCapacityExceededException("Flight capacity is full for the" +
-                                                      " -FLIGHT ID: " + flight.getId() +
-                                                      " -FLIGHT NUMBER: " + flight.getFlightNumber() +
-                                                      " -AIRLINE: " + flight.getAirline().getAirlineName() );
+                                                      " FLIGHT ID: " + flight.getId() +
+                                                      " FLIGHT NUMBER: " + flight.getFlightNumber() +
+                                                      " AIRLINE: " + flight.getAirline().getAirlineName() );
         }
     }
 
